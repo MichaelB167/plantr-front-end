@@ -10,12 +10,17 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
-        <li>{{#link-to "plants"}}Add Plant{{/link-to}}</li>
-        <li>{{#link-to "plant.annuals"}}Annuals{{/link-to}}</li>
-        <li>{{#link-to "plant.perennials"}}Perennials{{/link-to}}</li>
-        <li>{{#link-to "plant.herbs"}}Herbs{{/link-to}}</li>
-        <li>{{#link-to "plant.vegetables"}}Vegetables{{/link-to}}</li>
-        <li>{{#link-to "plant.fruits"}}Fruits{{/link-to}}</li>
+        <li>{{#link-to "plants"}}Add a Plant{{/link-to}}</li>
+        <div class="dropdown">
+          <button class="btn btn primary dropdown-toggle" type="button" data-toggle="dropdown">View My Plants<span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li>{{#link-to "plant.annuals"}}Annuals{{/link-to}}</li>
+            <li>{{#link-to "plant.perennials"}}Perennials{{/link-to}}</li>
+            <li>{{#link-to "plant.herbs"}}Herbs{{/link-to}}</li>
+            <li>{{#link-to "plant.vegetables"}}Vegetables{{/link-to}}</li>
+            <li>{{#link-to "plant.fruits"}}Fruits{{/link-to}}</li>
+          </ul>
+        </div>
         <li>{{#link-to "plant.harvest"}}Harvest{{/link-to}}</li>
         <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
