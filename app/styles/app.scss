@@ -1,2 +1,7 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
+@import 'colors';
+
+body {
+  background-color: $background-color;
+}
