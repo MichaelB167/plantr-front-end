@@ -12,12 +12,11 @@ Router.map(function () {
   this.route('users');
   this.route('plants');
   this.route('plant', function() {
-    this.route('all');
-    this.route('annuals');
-    this.route('perennials');
-    this.route('herbs');
-    this.route('vegetables');
-    this.route('fruits');
+    this.route('annual');
+    this.route('perennial');
+    this.route('herb');
+    this.route('vegetable');
+    this.route('fruit');
     this.route('harvest');
   });
 });
