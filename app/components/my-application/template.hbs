@@ -10,7 +10,13 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
-        <li>{{#link-to "change-password"}}Change Password{{/link-to}}</li>
+        <li>{{#link-to "plants"}}Add Plant{{/link-to}}</li>
+        <li>{{#link-to "plant.annuals"}}Annuals{{/link-to}}</li>
+        <li>{{#link-to "plant.perennials"}}Perennials{{/link-to}}</li>
+        <li>{{#link-to "plant.herbs"}}Herbs{{/link-to}}</li>
+        <li>{{#link-to "plant.vegetables"}}Vegetables{{/link-to}}</li>
+        <li>{{#link-to "plant.fruits"}}Fruits{{/link-to}}</li>
+        <li>{{#link-to "plant.harvest"}}Harvest{{/link-to}}</li>
         <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
         <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
