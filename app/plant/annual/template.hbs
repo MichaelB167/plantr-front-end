@@ -1,4 +1,6 @@
 <h1>Annuals</h1>
 {{#each model.plant as |eachPlant|}}
-  {{annual-component plant=eachPlant}}
+  {{annual-component plant=eachPlant
+    routeUpdatePlant='updatePlant'
+    routeDestroyPlant='destroyPlant'}}
 {{/each}}
