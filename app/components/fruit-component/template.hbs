@@ -1,1 +1,5 @@
-{{yield}}
+{{#if (eq plant.category "fruit")}}
+  <h4>Plant Name: {{plant.name}}</h4>
+  <h4>Quantity: {{plant.quantity}}</h4>
+  <h4>Care Notes: {{plant.careNotes}}</h4>
+{{/if}}
