@@ -17,6 +17,7 @@
       </select>
       {{input value=plant.name placeholder="Name"}}
       {{input value=plant.quantity type="Number" placeholder="Quantity"}}
-      {{input value=form.careNotes placeholder="Care Notes"}}
+      {{input value=plant.careNotes placeholder="Care Notes"}}
+      <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
   {{/unless}}
 {{/if}}
