@@ -8,8 +8,8 @@ export default Ember.Component.extend({
       harvest: this.get('form.harvest'),
       name: this.get('form.name'),
       quantity: this.get('form.quantity'),
-      plantedOn: this.get('form.plantedOn'),
-      expectedHarvest: this.get('form.expectedHarvest'),
+      plantedOn: new Date(this.get('form.plantedOn')),
+      expectedHarvest: new Date(this.get('form.expectedHarvest')),
       careNotes: this.get('form.careNotes')
     };
   }),
