@@ -1,6 +1,7 @@
 @import 'bootstrap';
 @import 'bootstrap/theme';
 @import 'colors';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
 body {
   background-color: $background-color;
@@ -15,12 +16,12 @@ body {
 }
 
 .plant-input {
-  width: 40%;
-  background-color: #bae3a6;
-  padding-bottom: 15px;
-  padding: 20px;
+  background-color: $plant-form-background;
   border: 5px solid;
   border-radius: 50px;
+  padding: 20px;
+  padding-bottom: 15px;
+  width: 40%;
 }
 
 .plant-button {
