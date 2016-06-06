@@ -18,8 +18,9 @@ export default Ember.Component.extend({
       this.sendAction('routeCreatePlant', this.get('plantProperties'));
       this.set('form', {});
     },
-    selectValue () {
-      this.set('form.storage', Ember.$('select').val());
+    selectValue: function() {
+      this.set('form.category', Ember.$('select').val());
+      console.log(this);
     }
   }
 });
