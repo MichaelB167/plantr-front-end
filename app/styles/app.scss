@@ -5,3 +5,11 @@
 body {
   background-color: $background-color;
 }
+
+.navbar-nav {
+  display: inline-flex;
+}
+
+.dropdown-toggle {
+  margin-top: 8.5px;
+}
