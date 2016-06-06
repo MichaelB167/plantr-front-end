@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid plant-input">
   <h4>What kind of plant did you add?</h4>
   <select name="category" {{action "selectValue" on="change"}}>
     <option class="category" value=annual>Annual</option>
@@ -15,5 +15,5 @@
   {{input value=form.expectedHarvest type="Date"}}
   <h4>Does it require special care?</h4>
   {{input value=form.careNotes placeholder="Care Notes"}}
+  <button class="btn btn-success plant-button" {{action 'createPlant'}}>Create</button>
 </div>
-<button class="btn btn-success" {{action 'createPlant'}}>Create</button>
