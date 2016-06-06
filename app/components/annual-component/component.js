@@ -13,6 +13,11 @@ export default Ember.Component.extend({
     },
     edit: function(){
       this.toggleProperty('canUpdate');
+    },
+    harvest: function() {
+      this.set('plant.harvest', 'true');
+      this.sendAction('routeUpdatePlant', this.get('plant'));
+      this.set('canUpdate', false);
     }
   }
 });
