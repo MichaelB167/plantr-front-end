@@ -1,1 +1,4 @@
-{{outlet}}
+<h1>Fruits</h1>
+{{#each model.plant as |eachPlant|}}
+  {{fruit-component plant=eachPlant}}
+{{/each}}
