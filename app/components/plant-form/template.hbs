@@ -1,3 +1,18 @@
-<div>
-  <h4>What type was your plant?</h4>
+<div class="container-fluid">
+  <h4>What kind of plant did you add?</h4>
+  <select name="category" {{action "selectValue" on="change"}}>
+    <option class="category" value=annual>Annual</option>
+    <option class="category" value=perennial>Perennial</option>
+    <option class="category" value=herb>Herb</option>
+    <option class="category" value=vegetable>Vegetable</option>
+    <option class="category" value=fruit>Fruit</option>
+  </select>
+  {{input value=form.name placeholder="Name"}}
+  {{input value=form.quantity type="Number" placeholder="Quantity"}}
+  <h4>When did you plant it?</h4>
+  {{input value=form.plantedOn type="Date"}}
+  <h4>Around when can it be harvested?</h4>
+  {{input value=form.expectedHarvest type="Date"}}
+  <h4>Does it require special care?</h4>
+  {{input value=form.careNotes placeholder="Care Notes"}}
 </div>
