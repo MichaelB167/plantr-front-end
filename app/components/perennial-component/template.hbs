@@ -5,6 +5,7 @@
         <h4>Plant Name: {{plant.name}}</h4>
         <h4>Quantity: {{plant.quantity}}</h4>
         <h4>Care Notes: {{plant.careNotes}}</h4>
+        <h4>Time since planting: {{moment-to-now plant.plantedOn hidePrefix=true}}</h4>
         <button class="btn btn-success btn-xs" {{action 'harvestPlant'}}>Harvest</button>
         <button class="btn btn-secondary btn-xs" {{action 'edit'}}>Edit</button>
         <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
@@ -19,9 +20,9 @@
         <option class="category" value=vegetable>Vegetable</option>
         <option class="category" value=fruit>Fruit</option>
       </select>
-      {{input value=plant.name placeholder="Name"}}
-      {{input value=plant.quantity type="Number" placeholder="Quantity"}}
-      {{input value=plant.careNotes placeholder="Care Notes"}}
+      <p>Name: {{input value=plant.name placeholder="Name"}}</p>
+      <p>Quantity: {{input value=plant.quantity type="Number" placeholder="Quantity"}}</p>
+      <p>Care notes: {{input value=plant.careNotes placeholder="Care Notes"}}</p>
       <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
   {{/unless}}
 {{/if}}
