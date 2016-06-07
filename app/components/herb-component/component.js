@@ -9,6 +9,7 @@ export default Ember.Component.extend({
     },
     updatePlant: function() {
       this.set('plant.category', Ember.$('select').val());
+      this.set('plant.expectedHarvest', new Date(this.get('plant.expectedHarvest')));
       this.sendAction('routeUpdatePlant', this.get('plant'));
       this.set('canUpdate', false);
       this.set('hasHarvested', false);
