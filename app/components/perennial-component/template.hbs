@@ -1,16 +1,11 @@
 {{#if (eq plant.category "perennial")}}
   {{#unless canUpdate}}
-    {{#unless hasHarvested}}
-      {{#unless (eq plant.harvest "true")}}
         <h4>Plant Name: {{plant.name}}</h4>
         <h4>Quantity: {{plant.quantity}}</h4>
         <h4>Care Notes: {{plant.careNotes}}</h4>
         <h4>Time since planting: {{moment-to-now plant.plantedOn hidePrefix=true}}</h4>
-        <button class="btn btn-success btn-xs" {{action 'harvestPlant'}}>Harvest</button>
         <button class="btn btn-secondary btn-xs" {{action 'edit'}}>Edit</button>
         <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
-      {{/unless}}
-    {{/unless}}
     {{else}}
       <select name="category">
         <option class="category" value="">Select a Category</option>
