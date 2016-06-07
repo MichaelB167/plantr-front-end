@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('users');
   this.route('plants');
   this.route('plant', function() {
+    this.route('view-all');
     this.route('annual');
     this.route('perennial');
     this.route('herb');
