@@ -1,0 +1,6 @@
+<h1>All Plants</h1>
+{{#each model.plant as |eachPlant|}}
+  {{view-all-component plant=eachPlant
+    routeUpdatePlant='updatePlant'
+    routeDestroyPlant='destroyPlant'}}
+{{/each}}
