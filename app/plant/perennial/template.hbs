@@ -1,1 +1,6 @@
-{{outlet}}
+<h1>Perennials</h1>
+{{#each model.plant as |eachPlant|}}
+  {{perennial-component plant=eachPlant
+    routeUpdatePlant='updatePlant'
+    routeDestroyPlant='destroyPlant'}}
+{{/each}}
