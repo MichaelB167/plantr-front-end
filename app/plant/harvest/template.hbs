@@ -1,1 +1,6 @@
-{{outlet}}
+<h1>My Harvest</h1>
+{{#each model.plant as |eachPlant|}}
+  {{harvest-component plant=eachPlant
+    routeUpdatePlant='updatePlant'
+    routeDestroyPlant='destroyPlant'}}
+{{/each}}
