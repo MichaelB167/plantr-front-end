@@ -1,0 +1,22 @@
+{{#if (eq plant.harvest "true")}}
+  {{#unless canUpdate}}
+    <h4>Plant Name: {{plant.name}}</h4>
+    <h4>Quantity: {{plant.quantity}}</h4>
+    <h4>Care Notes: {{plant.careNotes}}</h4>
+    <button class="btn btn-secondary btn-xs" {{action 'edit'}}>Edit</button>
+    <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
+    {{else}}
+      <select name="category">
+        <option class="category" value="">Select a Category</option>
+        <option class="category" value=annual>Annual</option>
+        <option class="category" value=perennial>Perennial</option>
+        <option class="category" value=herb>Herb</option>
+        <option class="category" value=vegetable>Vegetable</option>
+        <option class="category" value=fruit>Fruit</option>
+      </select>
+      {{input value=plant.name placeholder="Name"}}
+      {{input value=plant.quantity type="Number" placeholder="Quantity"}}
+      {{input value=plant.careNotes placeholder="Care Notes"}}
+      <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
+  {{/unless}}
+{{/if}}
