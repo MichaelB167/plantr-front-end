@@ -18,6 +18,7 @@
       <p>Name: {{input value=plant.name placeholder="Name"}}</p>
       <p>Quantity: {{input value=plant.quantity type="Number" placeholder="Quantity"}}</p>
       <p>Care notes: {{input value=plant.careNotes placeholder="Care Notes"}}</p>
+      <p>Planted on: {{input value=plant.plantedOn type="Date"}}</p>
       <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
   {{/unless}}
 {{/if}}
