@@ -5,6 +5,8 @@
         <h4>Plant Name: {{plant.name}}</h4>
         <h4>Quantity: {{plant.quantity}}</h4>
         <h4>Care Notes: {{plant.careNotes}}</h4>
+        <h4>Time since planting: {{moment-to-now plant.plantedOn hidePrefix=true}}</h4>
+        <h4>Harvestable: {{moment-from-now plant.expectedHarvest interval=1000}}</h4>
         <button class="btn btn-success btn-xs" {{action 'harvestPlant'}}>Harvest</button>
         <button class="btn btn-secondary btn-xs" {{action 'edit'}}>Edit</button>
         <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
