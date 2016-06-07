@@ -6,7 +6,7 @@ export default Model.extend({
   harvest: attr('string'),
   name: attr('string'),
   quantity: attr('number'),
-  plantedOn: attr('date'),
-  expectedHarvest: attr('date'),
+  plantedOn: attr('string'),
+  expectedHarvest: attr('string'),
   careNotes: attr('string')
 });
