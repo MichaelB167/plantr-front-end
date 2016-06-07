@@ -17,7 +17,7 @@ export default Ember.Component.extend({
       this.toggleProperty('canUpdate');
     },
     harvested: function(){
-      this.toggleProperty('hasHarvested')
+      this.toggleProperty('hasHarvested');
     },
     harvestPlant: function() {
       this.set('plant.harvest', 'true');
