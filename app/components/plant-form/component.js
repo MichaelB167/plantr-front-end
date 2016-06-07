@@ -14,13 +14,13 @@ export default Ember.Component.extend({
     };
   }),
   actions: {
+    setVal: function() {
+      this.set('form.category', Ember.$('select').val());
+      console.log(this);
+    },
     createPlant: function() {
       this.sendAction('routeCreatePlant', this.get('plantProperties'));
       this.set('form', {});
     },
-    selectValue: function() {
-      this.set('form.category', Ember.$('select').val());
-      console.log(this);
-    }
   }
 });
