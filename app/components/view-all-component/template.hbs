@@ -1,4 +1,4 @@
-{{#each plant.id}}
+{{#if (not-eq plant.harvest "true")}}
   {{#unless canUpdate}}
     {{#unless hasHarvested}}
       {{#unless (eq plant.harvest "true")}}
@@ -24,4 +24,4 @@
       {{input value=plant.careNotes placeholder="Care Notes"}}
       <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
   {{/unless}}
-{{/each}}
+{{/if}}
