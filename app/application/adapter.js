@@ -3,7 +3,7 @@ import ActiveModelAdapter from 'active-model-adapter';
 
 export default ActiveModelAdapter.extend({
   auth: Ember.inject.service(),
-  host: 'https://plantr-api.herokuapp.com/',
+  //host: 'https://plantr-api.herokuapp.com/',
   headers: Ember.computed('auth.credentials.token', {
     get () {
       let headers = {};
