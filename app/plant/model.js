@@ -9,5 +9,5 @@ export default Model.extend({
   plantedOn: attr('string'),
   expectedHarvest: attr('string'),
   careNotes: attr('string'),
-  zipcode: attr('number')
+  zipcode: attr('string')
 });
