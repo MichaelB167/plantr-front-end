@@ -13,9 +13,12 @@
   <h4>When did you plant it?</h4>
   {{input value=form.plantedOn type="Date"}}
   <h4>Around when can it be harvested?</h4>
-  <p>(Please leave blank for annual/perennial<br>unless you eat shrubbery)</p>
+  <p>(Not needed for annuals/perennials)</p>
   {{input value=form.expectedHarvest type="Date"}}
   <h4>Does it require special care?</h4>
   {{input value=form.careNotes placeholder="Care Notes"}}
+  <h4>Where did you plant it?</h4>
+  <p>(only needed once per category)</p>
+  {{input value=form.zipcode placeholder="Zipcode"}}
   <button class="btn btn-success plant-button" {{action 'createPlant'}}>Create</button>
 </div>
