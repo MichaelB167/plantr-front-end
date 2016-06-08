@@ -4,25 +4,25 @@
       <p>Watering needed?</p>
       <span><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:{{plant.zipcode}}.1.99999 bannertypeclick=wu_clean2day" title="Click for a more detailed forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_cond&zip={{plant.zipcode}}&language=EN" width="200" /></a></span>
     {{/if}}
-        <h4>Plant Name: {{plant.name}}</h4>
-        <h4>Quantity: {{plant.quantity}}</h4>
-        <h4>Care Notes: {{plant.careNotes}}</h4>
-        <h4>Time since planting: {{moment-to-now plant.plantedOn hidePrefix=true allow-empty=true}}</h4>
-        <button class="btn btn-secondary btn-xs" {{action 'edit'}}>Edit</button>
-        <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
+      <h4>Plant Name: {{plant.name}}</h4>
+      <h4>Quantity: {{plant.quantity}}</h4>
+      <h4>Care Notes: {{plant.careNotes}}</h4>
+      <h4>Time since planting: {{moment-to-now plant.plantedOn hidePrefix=true allow-empty=true}}</h4>
+      <button class="btn btn-secondary btn-xs" {{action 'edit'}}>Edit</button>
+      <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
     {{else}}
-      <select name="category">
-        <option class="category" value="">Select a Category</option>
-        <option class="category" value=annual>Annual</option>
-        <option class="category" value=perennial>Perennial</option>
-        <option class="category" value=herb>Herb</option>
-        <option class="category" value=vegetable>Vegetable</option>
-        <option class="category" value=fruit>Fruit</option>
-      </select>
-      <p>Name: {{input value=plant.name placeholder="Name"}}</p>
-      <p>Quantity: {{input value=plant.quantity type="Number" placeholder="Quantity"}}</p>
-      <p>Care notes: {{input value=plant.careNotes placeholder="Care Notes"}}</p>
-      <p>Planted on: {{input value=plant.plantedOn type="Date"}}</p>
-      <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
+    <select name="category">
+      <option class="category" value="">Select a Category</option>
+      <option class="category" value=annual>Annual</option>
+      <option class="category" value=perennial>Perennial</option>
+      <option class="category" value=herb>Herb</option>
+      <option class="category" value=vegetable>Vegetable</option>
+      <option class="category" value=fruit>Fruit</option>
+    </select>
+    <p>Name: {{input value=plant.name placeholder="Name"}}</p>
+    <p>Quantity: {{input value=plant.quantity type="Number" placeholder="Quantity"}}</p>
+    <p>Care notes: {{input value=plant.careNotes placeholder="Care Notes"}}</p>
+    <p>Planted on: {{input value=plant.plantedOn type="Date"}}</p>
+    <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
   {{/unless}}
 {{/if}}
