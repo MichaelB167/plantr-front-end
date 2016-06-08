@@ -2,6 +2,10 @@
   {{#unless canUpdate}}
     {{#unless hasHarvested}}
       {{#unless (eq plant.harvest "true")}}
+        {{#if (gt plant.zipcode "1")}}
+          <p>Do I need to water?</p>
+          <span><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:{{plant.zipcode}}.1.99999 bannertypeclick=wu_clean2day" title="Click for a more detailed forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_cond&zip={{plant.zipcode}}&language=EN" width="200" /></a></span>
+        {{/if}}
         <h4>Category: {{plant.category}}</h4>
         <h4>Plant Name: {{plant.name}}</h4>
         <h4>Quantity: {{plant.quantity}}</h4>
