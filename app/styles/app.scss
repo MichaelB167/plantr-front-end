@@ -82,6 +82,7 @@ body.ember-application {
 }
 
 .section-header {
+  color: #fff;
   font-size: 50px;
   padding-bottom: 10px;
   text-align: center;
@@ -92,12 +93,14 @@ body.ember-application {
   border: 3px solid;
   border-color: $white;
   border-radius: 10px;
-  margin-top: 8px;
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px;
   overflow: auto;
   padding-bottom: 5px;
   padding-left: 10px;
   padding-top: 5px;
-  width: 30%;
+  width: 280px;
 }
 
 .door-entry {
