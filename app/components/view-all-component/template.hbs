@@ -22,6 +22,7 @@
       {{/unless}}
     {{/unless}}
     {{else}}
+    <div class="edit-display">
       <select name="category" autofocus>
         <option class="category" value="">Select a Category</option>
         <option class="category" value=annual>Annual</option>
@@ -36,5 +37,6 @@
       <p>Planted on: {{input value=plant.plantedOn type="Date"}}</p>
       <p>Expected Harvest: {{input value=plant.expectedHarvest type="Date"}}</p>
       <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
+    </div>
   {{/unless}}
 {{/if}}

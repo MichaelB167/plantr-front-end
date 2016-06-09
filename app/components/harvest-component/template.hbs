@@ -8,16 +8,18 @@
     <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
     </div>
     {{else}}
-      <select name="category" autofocus>
-        <option class="category" value="">Select a Category</option>
-        <option class="category" value=annual>Annual</option>
-        <option class="category" value=perennial>Perennial</option>
-        <option class="category" value=herb>Herb</option>
-        <option class="category" value=vegetable>Vegetable</option>
-        <option class="category" value=fruit>Fruit</option>
-      </select>
-      <p>Name:{{input value=plant.name placeholder="Name"}}</p>
-      <p>Quantity:{{input value=plant.quantity type="Number" placeholder="Quantity"}}</p>
-      <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
+      <div class="edit-display">
+        <select name="category" autofocus>
+          <option class="category" value="">Select a Category</option>
+          <option class="category" value=annual>Annual</option>
+          <option class="category" value=perennial>Perennial</option>
+          <option class="category" value=herb>Herb</option>
+          <option class="category" value=vegetable>Vegetable</option>
+          <option class="category" value=fruit>Fruit</option>
+        </select>
+        <p>Name:{{input value=plant.name placeholder="Name"}}</p>
+        <p>Quantity:{{input value=plant.quantity type="Number" placeholder="Quantity"}}</p>
+        <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
+      </div>  
   {{/unless}}
 {{/if}}

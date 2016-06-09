@@ -21,19 +21,21 @@
       {{/unless}}
     {{/unless}}
     {{else}}
-    <p>Category:</p>
-    <select name="category" autofocus>
-      <option class="category" value=annual>Annual</option>
-      <option class="category" value=perennial>Perennial</option>
-      <option class="category" value=herb>Herb</option>
-      <option class="category" value=vegetable>Vegetable</option>
-      <option selected class="category" value=fruit>Fruit</option>
-    </select>
-    <p>Name: {{input value=plant.name placeholder="Name"}}</p>
-    <p>Quantity: {{input value=plant.quantity type="Number" placeholder="Quantity"}}</p>
-    <p>Care notes: {{input value=plant.careNotes placeholder="Care Notes"}}</p>
-    <p>Planted on: {{input value=plant.plantedOn type="Date"}}</p>
-    <p>Expected Harvest: {{input value=plant.expectedHarvest type="Date"}}</p>
-    <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
+    <div class="edit-display">
+      <p>Category:</p>
+      <select name="category" autofocus>
+        <option class="category" value=annual>Annual</option>
+        <option class="category" value=perennial>Perennial</option>
+        <option class="category" value=herb>Herb</option>
+        <option class="category" value=vegetable>Vegetable</option>
+        <option selected class="category" value=fruit>Fruit</option>
+      </select>
+      <p>Name: {{input value=plant.name placeholder="Name"}}</p>
+      <p>Quantity: {{input value=plant.quantity type="Number" placeholder="Quantity"}}</p>
+      <p>Care notes: {{input value=plant.careNotes placeholder="Care Notes"}}</p>
+      <p>Planted on: {{input value=plant.plantedOn type="Date"}}</p>
+      <p>Expected Harvest: {{input value=plant.expectedHarvest type="Date"}}</p>
+      <button class="btn btn-secondary btn-sm" {{action 'updatePlant'}}>Update Plant</button>
+    </div>
   {{/unless}}
 {{/if}}
