@@ -1,73 +1,82 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# Project Components
 
-# Authentication in Ember
+Live application: <http://michaelb167.github.io/plantr-front-end/index.html>
 
-## Prerequisites
+Back end repository: <https://github.com/MichaelB167/plantr-api>
 
--   [ga-wdi-boston/ember-resources](https://github.com/ga-wdi-boston/ember-resources)
--   [ga-wdi-boston/ember-resources-one-to-many](https://github.com/ga-wdi-boston/ember-resources-one-to-many)
+## App Explanation
 
-## Objectives
 
-By the end of this, developers should be able to:
+## Technologies Used
 
--   Implement token authentication in an Ember application.
--   Enforce authentication in protected routes.
+This app was created using the following:
 
-## Preparation
+Front End: Ember.js, HTMLbars, CSS/SASS, Bootstrap
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
-1.  Install dependencies with `npm install` and `bower install`.
-1.  Follow the instructions to setup the [API]().
-1.  Start the font-end server with `ember server --proxy http://localhost:3000`.
+Back End: Ruby on Rails
 
-## Ember Services
+## Approach Taken
 
-## Demo: Write a Demo
+I closely followed the suggested steps outlined in the project repository.  More
+specifically, I started by mapping out my wireframes and entity relationship
+diagram to determine how my web app could best recieve and render data.  I could
+have attached a gym name attribute to my climbs table but decided to make a
+separate table for gyms, mostly because climb difficulties vary wildly by
+gym/location but also because I wanted to challenge myself and better
+understand the nuances of working with nested routes.  Ulimately I decided that
+building models/migrations with one-to-many relationships users/gyms,
+users/climbs, and gyms/climbs made the most sense given the aforementioned
+considerations and the user stories I developed.
 
-Demos are demonstrations, and developers should give their full attention to
-them. It's a great time for them to take notes about important concepts before
-applying them in an exercise.
+Prior to working on the front end I ensured that I had curl scripts working for
+all required CRUD actions.  This helped me not only ensure that my back end was
+functioning as desired but also better understand how to diagnose problems that
+arose while working in the front end.
 
-Demos correspond to the "I do" portion of scaffolding from consultant trainging.
+I used a combination of JavaScript, jQuery and AJAX to interact with the server
+and render user data in the browser.  To provide security for the user, I
+required that all interactions be authenticated and that the user would only be
+able to interact with data that they provided.
 
-## Exercise: Write an Exercise
+I knew I wanted to have a feature that displayed personalized training
+suggestions since as a user myself I've been unable to find a climbing-specific
+app that provides such a service and to me it's one of the more interesting
+potential applications of the data.  However, I reminded myself to table that
+feature until the core requirements for the app's functionality were met.
 
-During exercises, developers should apply concepts covered in the previous demo.
-This is their first chance to generalize concepts introduced. Exercises should
-be very focused, and flow natural into a lab.
+In an effort to maintain modularity in my code I limited index files to
+containing requirements rather than code as well as created separate directories
+for files such as AJAX requests and event handlers.  To backup and track my
+project, I made frequent and descriptive commits to my project repository.
 
-Exercises correspond to the "We do" portion of scaffolding from consultant
-trainging.
+## Unsolved Problems
 
-## Lab: Write a Lab
+1.  Climbs don't currently save or display with a gym ID attached. I didn't
+realize that my routes weren't nested for a while and have now fixed
+almost everything to function with nested routes other than patch but didn't
+get it quite ready to demo.
+1.  Container divs for each climb need to be responsive; if a note is too long
+it causes problems with the display.
+1.  Completing the bonus training feature (the most common hold among among the
+users' falls is displayed).  I briefly considered displaying the results of a
+SQL query for that data but as far as I know queries cannot be user dynamic and
+I wasn't sure how to update the user ID filter in each users' query.  I can get
+all climbs and return the most common string of an array but need to convert
+the JSON into an array of climbing hold strings to operate on that array.
 
-During labs, developers get to demonstrate their understanding of concepts from
-demos and applied knowledge from exercises. Labs are an opportunity for
-developers to build confidence, and also serve as a diagnostic tool for
-consultants to evaluate developer understanding.
+## User Stories
 
-Labs should be timed explicitly using a timer. When estimating the time it will
-take to complete a lab, it is better to overestimate. During labs, consultants
-should circle the room and interact with developers, noting patterns and
-prompting with hints on how to complete the lab. If developers end early, a
-consultant may stop the lab timer. If developers do not finish in time, a
-consultant may give more time at her discretion based on current talk pace, the
-current estimate for the talk, and the importance of completing the lab while
-consultant support is available.
+1.  As a user, I want to be able to sign up and sign in so that I have a unique
+account.
+1.  As a user, I want to be able to input plants with various attributes so I know how many plants I have at any given time and have an easy way of checking their distribution.
+1.  As a user, I want know when I planted plants and approximately when I can expect to be able to harvest the edible ones.
+1.  As a user, I want to see a brief weather forecast for my location so I know whether I need to water the plants in the next few days or not.
+1.  As a user, I want to be able to harvest plants when they're ready so I can use them in recipes.
+1.  As a user, I want to see a brief list of recipes based on what plants I have harvested recently.  
+1.  As a user, I want to be able to change my password to and have all my transactions secured to maintain the security of my account and data.
 
-Labs correspond to the "You do" portion of scaffolding from consultant
-trainging.
+## Wireframes/Database Structure
 
-## Additional Resources
+Wireframes: <http://i.imgur.com/cOQQOVP.jpg>
 
--   [Implementing Authentication with Ember Services - Ember Igniter](http://emberigniter.com/implementing-authentication-with-ember-services/)
--   [jpadilla/ember-simple-auth-token: Ember Simple Auth extension that is compatible with token-based authentication like JWT.](https://github.com/jpadilla/ember-simple-auth-token)
--   [simplabs/ember-simple-auth: A library for implementing authentication/authorization in Ember.js applications.](https://github.com/simplabs/ember-simple-auth)
--   [Create your first Ember 2.0 app: From authentication to calling an API](https://auth0.com/blog/2015/08/11/create-your-first-ember-2-dot-0-app-from-authentication-to-calling-an-api/)
-
-## [License](LICENSE)
-
-Source code distributed under the MIT license. Text and other assets copyright
-General Assembly, Inc., all rights reserved.
+Entity Relationships Diagram: <http://i.imgur.com/WZYh63M.jpg>
