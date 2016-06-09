@@ -8,7 +8,7 @@ $raleway: Raleway, sans-serif;
 
 body {
   background-color: $background-color;
-  background-image: url('http://i.imgur.com/IxCIMet.png');
+  background-image: url('/images/repeating-background.jpg');
   background-repeat: repeat;
   font-family: $open-sans;
 }
@@ -45,7 +45,7 @@ body.ember-application {
 }
 
 .index-background {
-  background-image: url('http://i.imgur.com/yyO2reY.jpg');
+  background-image: url('/images/index-background.jpg');
   background-position: auto;
   background-repeat: no-repeat;
   background-size: cover;
