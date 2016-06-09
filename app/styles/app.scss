@@ -103,6 +103,20 @@ body.ember-application {
   width: 280px;
 }
 
+.harvest-display {
+  background-color: $background-color;
+  border: 3px solid;
+  border-color: $white;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-top: 20px;
+  overflow: auto;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  width: 280px;
+}
+
 .door-entry {
   height: 70%;
   margin-left: 30%;
