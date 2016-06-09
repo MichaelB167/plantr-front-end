@@ -1,10 +1,12 @@
 {{#if (eq plant.harvest "true")}}
   {{#unless canUpdate}}
+    <div class="plant-display">
     <h4>Category: {{plant.category}}</h4>
     <h4>Plant Name: {{plant.name}}</h4>
     <h4>Quantity: {{plant.quantity}}</h4>
     <button class="btn btn-secondary btn-xs" {{action 'edit'}}>Edit</button>
     <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
+    </div>
     {{else}}
       <select name="category" autofocus>
         <option class="category" value="">Select a Category</option>

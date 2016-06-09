@@ -1,5 +1,6 @@
 {{#if (eq plant.category "perennial")}}
   {{#unless canUpdate}}
+    <div class="plant-display">
     {{#if (gt plant.zipcode "0")}}
       <p>Watering needed?</p>
       <span><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:{{plant.zipcode}}.1.99999 bannertypeclick=wu_clean2day" title="Click for a more detailed forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_clean2day_cond&zip={{plant.zipcode}}&language=EN" width="200" /></a></span>
@@ -10,6 +11,7 @@
       <h4>Time since planting: {{moment-to-now plant.plantedOn hidePrefix=true allow-empty=true}}</h4>
       <button class="btn btn-secondary btn-xs" {{action 'edit'}}>Edit</button>
       <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
+    </div>
     {{else}}
     <p>Category:</p>
     <select name="category" autofocus>
