@@ -56,38 +56,46 @@ body.ember-application {
 }
 
 .index-header {
-  color: #fff;
-  font-size: 80px;
+  color: $white;
   font-family: $raleway;
-  text-align: center;
+  font-size: 80px;
   padding-top: 30px;
+  text-align: center;
 }
 
 .secondary-index-header {
-  color: #fff;
-  font-size: 20px;
+  background-color: $index-dark-green;
+  border: 2px solid;
+  border-color: $index-darker-green;
+  border-radius: 150px;
+  color: $white;
   font-family: $raleway;
+  font-size: 20px;
+  margin-left: 330px;
+  margin-top: 86px;
+  opacity: .65;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: -15%;
   position: absolute;
   text-align: center;
-  margin-left: 300px;
-  margin-top: 86px;
 }
 
 .plant-display {
   background-color: $background-color;
   border: 3px solid;
-  border-color: #fff;
+  border-color: $white;
   border-radius: 10px;
   margin-top: 5px;
-  width: 30%;
   overflow: auto;
   padding-left: 10px;
+  width: 30%;
 }
 
 .door-entry {
   height: 70%;
-  margin-top: 20px;
   margin-left: 30%;
+  margin-top: 20px;
   width: 20%;
 }
 
@@ -96,7 +104,7 @@ body.ember-application {
   width: 100%;
 }
 
-#doorArrow {
+#door-arrow {
   font-size: 80px;
 }
 
