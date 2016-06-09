@@ -2,15 +2,28 @@
 @import 'bootstrap/theme';
 @import 'colors';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Raleway:200);
 $open-sans: Open Sans, sans-serif;
+$raleway: Raleway, sans-serif;
 
 body {
   background-color: $background-color;
+  background-image: url('http://i.imgur.com/IxCIMet.png');
+  background-repeat: repeat;
   font-family: $open-sans;
+}
+
+body.ember-application {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-nav {
   display: inline-flex;
+}
+
+#nav-color {
+  background-color: $navbar-light-green;
 }
 
 .dropdown-toggle {
@@ -29,4 +42,74 @@ body {
 .plant-button {
   margin-left: 30%;
   margin-top: 5%;
+}
+
+.index-background {
+  background-image: url('http://i.imgur.com/yyO2reY.jpg');
+  background-position: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin-left: -260px;
+  margin-top: -39px;
+  width: 160%;
+}
+
+.index-header {
+  color: #fff;
+  font-size: 80px;
+  font-family: $raleway;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.secondary-index-header {
+  color: #fff;
+  font-size: 20px;
+  font-family: $raleway;
+  position: absolute;
+  text-align: center;
+  margin-left: 300px;
+  margin-top: 86px;
+}
+
+.plant-display {
+  background-color: $background-color;
+  border: 3px solid;
+  border-color: #fff;
+  border-radius: 10px;
+  margin-top: 5px;
+  width: 30%;
+  overflow: auto;
+  padding-left: 10px;
+}
+
+.door-entry {
+  height: 70%;
+  margin-top: 20px;
+  margin-left: 30%;
+  width: 20%;
+}
+
+.clickable-door {
+  height: 100%;
+  width: 100%;
+}
+
+#doorArrow {
+  font-size: 80px;
+}
+
+.rotation1 {
+  -webkit-transform: rotate(30deg);
+}
+
+.rotation2 {
+  -webkit-transform: rotate(330deg);
+}
+
+@media (max-width: 500px) {
+  .index-header {
+    font-size: 30px;
+  }
 }
