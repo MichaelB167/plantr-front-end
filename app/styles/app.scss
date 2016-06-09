@@ -81,14 +81,22 @@ body.ember-application {
   text-align: center;
 }
 
+.section-header {
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
 .plant-display {
   background-color: $background-color;
   border: 3px solid;
   border-color: $white;
   border-radius: 10px;
-  margin-top: 5px;
+  margin-top: 8px;
   overflow: auto;
+  padding-bottom: 5px;
   padding-left: 10px;
+  padding-top: 5px;
   width: 30%;
 }
 
