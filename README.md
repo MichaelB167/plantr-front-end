@@ -33,7 +33,7 @@ Back End: Ruby on Rails
 ## Approach Taken
 
 Coming up with a project idea that would best harness the power of ember and
-still be viable given our limited ammount of time was a length process for me.
+still be viable given our limited amount of time was a length process for me.
 Eventually I settled on this concept because the core of the app's
 functionality builds on projects we've worked on in class and thus was
 definitely doable, but it allowed the inclusion of several challenging
@@ -41,9 +41,8 @@ features that I could apply myself to if I finished the base requirements early
 or pursue after the course's conclusion.
 
 Before the project period began, I re-read many of the ember docs to get a
-better grasp on how components are structured and find some helpful tools
-(ember truth helpers definitely being one as it allowed me to bypass nested
-components).  I then started by mapping out my wireframes and entity
+better grasp on how components are structured and find some helpful tools.
+I then started by mapping out my wireframes and entity
 relationship diagram to determine how my web app could best recieve and render
 data.  Having a one-to-many relationship between users and plants made the most
 sense in my opinion, since that was the essence of my app and I felt other
@@ -93,7 +92,7 @@ account.
 1.  As a user, I want to see a brief weather forecast for my location so I know whether I need to water the plants in the next few days or not.
 1.  As a user, I want to be able to harvest plants when they're ready so I can use them in recipes.
 1.  As a user, I want to see a brief list of recipes based on what plants I have harvested recently.
-1.  As a user, I want to be able to change my password to and have all my transactions secured to maintain the security of my account and data.
+1.  As a user, I want to be able to change my password to and have all my transactions authenticated to maintain the security of my account and data.
 
 ## Unsolved Problems
 
