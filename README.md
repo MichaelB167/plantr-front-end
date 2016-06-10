@@ -1,6 +1,6 @@
 # Project Components
 
-Live application: <http://michaelb167.github.io/plantr-front-end/index.html>
+Live application: <http://michaelb167.github.io/plantr-front-end>
 
 Back end repository: <https://github.com/MichaelB167/plantr-api>
 
