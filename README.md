@@ -4,8 +4,13 @@ Live application: <http://michaelb167.github.io/plantr-front-end/index.html>
 
 Back end repository: <https://github.com/MichaelB167/plantr-api>
 
+Screenshot:
+
+<img src="http://i.imgur.com/M3WriEW.jpg">
+
 ## App Explanation
 
+I've always been interested in the idea of self-sustainability to reduce our collective ecological footprint.  To that point I decided to make a gardening web-app so users (including myself) can easily track/care for plants in their garden, harvest plants when they are ready to eat, and eventually find recipes using those plants.    
 
 ## Technologies Used
 
@@ -49,20 +54,10 @@ containing requirements rather than code as well as created separate directories
 for files such as AJAX requests and event handlers.  To backup and track my
 project, I made frequent and descriptive commits to my project repository.
 
-## Unsolved Problems
+## Dependencies Installation
 
-1.  Climbs don't currently save or display with a gym ID attached. I didn't
-realize that my routes weren't nested for a while and have now fixed
-almost everything to function with nested routes other than patch but didn't
-get it quite ready to demo.
-1.  Container divs for each climb need to be responsive; if a note is too long
-it causes problems with the display.
-1.  Completing the bonus training feature (the most common hold among among the
-users' falls is displayed).  I briefly considered displaying the results of a
-SQL query for that data but as far as I know queries cannot be user dynamic and
-I wasn't sure how to update the user ID filter in each users' query.  I can get
-all climbs and return the most common string of an array but need to convert
-the JSON into an array of climbing hold strings to operate on that array.
+1.  Ember truth helpers- `ember install ember-truth-helpers`
+1.  Ember moment helper- `ember install ember-moment`
 
 ## User Stories
 
@@ -72,7 +67,7 @@ account.
 1.  As a user, I want know when I planted plants and approximately when I can expect to be able to harvest the edible ones.
 1.  As a user, I want to see a brief weather forecast for my location so I know whether I need to water the plants in the next few days or not.
 1.  As a user, I want to be able to harvest plants when they're ready so I can use them in recipes.
-1.  As a user, I want to see a brief list of recipes based on what plants I have harvested recently.  
+1.  As a user, I want to see a brief list of recipes based on what plants I have harvested recently.
 1.  As a user, I want to be able to change my password to and have all my transactions secured to maintain the security of my account and data.
 
 ## Wireframes/Database Structure
@@ -80,3 +75,10 @@ account.
 Wireframes: <http://i.imgur.com/cOQQOVP.jpg>
 
 Entity Relationships Diagram: <http://i.imgur.com/WZYh63M.jpg>
+
+## Unsolved Problems
+
+1.  Rendering the correct data from Food2Fork API recipe searches in the browser.  I can successfully route searches through my API but am still working through understanding the nuances of Ember files structures as they pertain to routing 3rd party API calls.  I think I'm close to getting it though.
+1.  I would like to generally refine the CSS and learn some more tricks for using it with HTMLbars.
+1.  I haven't had time to start these yet but I want to sort plants by expected harvest date and render flickr images of each plant next to its information.
+1.  Hurdle- generally navigating through Ember and staying patient when I got lost in sending data up/down the file tree.  Rereading the docs a lot and working through problems with classmates helped a ton in that respect.
