@@ -163,4 +163,22 @@ body.ember-application {
   .index-header {
     font-size: 30px;
   }
+  .plant-input {
+    width: 100%;
+  }
+  .account-management {
+    display: inline-flex;
+    position: absolute;
+    margin-left: -220px;
+    margin-top: -52px;
+  }
+  #ember569 {
+    display: none;
+  }
+  #change-pass {
+    padding-right: 7px;
+  }
+  .navbar-collapse {
+    text-align: center;
+  }
 }
