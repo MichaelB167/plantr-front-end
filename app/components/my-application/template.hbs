@@ -4,13 +4,13 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
         {{#if isAuthenticated}}
-        <li>{{#link-to "users"}}Users{{/link-to}}</li>
+        <li id="user-nav">{{#link-to "users"}}Users{{/link-to}}</li>
         {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
-        <li>{{#link-to "plants"}}Add a Plant{{/link-to}}</li>
-        <div class="dropdown">
+        <li id="nav-one">{{#link-to "plants"}}Add Plant{{/link-to}}</li>
+        <div class="dropdown nav-dropdown">
           <button class="btn btn primary dropdown-toggle" type="button" data-toggle="dropdown">View My Garden<span class="caret"></span></button>
           <ul class="dropdown-menu">
             <li>{{#link-to "plant.view-all"}}All Plants{{/link-to}}</li>
@@ -22,10 +22,9 @@
           </ul>
         </div>
         <li>{{#link-to "plant.harvest"}}Harvest{{/link-to}}</li>
-        <div class="account-management">
           <li id="change-pass">{{#link-to "change-password"}}Change Password{{/link-to}}</li>
-          <li><a href="#" {{action "signOut"}}>Sign Out</a></li>
-        </div>
+          <p id="nav-break" class="nav-break">|</p>
+          <li id="sign-out"><a href="#" {{action "signOut"}}>Sign Out</a></li>
         {{else}}
         <li>{{#link-to "sign-up"}}Sign Up{{/link-to}}</li>
         <li>{{#link-to "sign-in"}}Sign In{{/link-to}}</li>
