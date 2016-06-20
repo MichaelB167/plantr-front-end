@@ -181,4 +181,29 @@ body.ember-application {
   .navbar-collapse {
     text-align: center;
   }
+  .index-header {
+    margin-left: 85px;
+    font-size: 50px;
+  }
+  .door-entry {
+    background-color: red;
+    height: 25%;
+    margin-left: 190px;
+    margin-top: 230px;
+    position: absolute;
+    width: 100px;
+  }
+  .secondary-index-header {
+    display: none;
+  }
+  .index-background {
+    background-image: url('http://i.imgur.com/RaR5utJ.jpg');
+    background-position: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 107vh;
+    margin-left: -95px;
+    margin-top: -20px;
+    width: 137%;
+  }
 }
