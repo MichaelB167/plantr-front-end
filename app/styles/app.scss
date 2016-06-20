@@ -26,6 +26,13 @@ body.ember-application {
   background-color: $navbar-light-green;
 }
 
+@media (min-width: 500px) {
+  .nav-break {
+    display: none;
+  }
+}
+
+
 .dropdown-toggle {
   margin-top: 8.5px;
 }
@@ -163,39 +170,75 @@ body.ember-application {
   .index-header {
     font-size: 30px;
   }
+
   .plant-input {
     width: 100%;
   }
-  .account-management {
-    display: inline-flex;
-    position: absolute;
-    margin-left: -220px;
-    margin-top: -52px;
+
+  .navbar-nav {
+    float: left;
   }
-  #ember569 {
+
+  #user-nav {
     display: none;
   }
-  #change-pass {
-    padding-right: 7px;
-  }
+
   .navbar-collapse {
+    margin-top: 10px;
+    padding-top: 8px;
     text-align: center;
   }
+
+  #change-pass {
+    position: fixed;
+    margin-left: -240px;
+    margin-top: -70px;
+  }
+
+  #sign-out {
+    position: fixed;
+    margin-left: -120px;
+    margin-top: -70px;
+  }
+
+  #nav-break {
+    position: fixed;
+    margin-left: -113px;
+    margin-top: -60px;
+  }
+
+  .navbar-collapse li {
+    margin-top: -22px;
+  }
+
+  .nav-dropdown {
+    margin-top: -26px;
+    padding-bottom: 9px;
+  }
+
+  .nav-dropdown li {
+    margin-top: -10px;
+    text-align: center;
+    font-size: 16px;
+  }
+
   .index-header {
     margin-left: 85px;
     font-size: 50px;
   }
+
   .door-entry {
-    background-color: red;
     height: 25%;
     margin-left: 190px;
     margin-top: 230px;
     position: absolute;
     width: 100px;
   }
+
   .secondary-index-header {
     display: none;
   }
+
   .index-background {
     background-image: url('http://i.imgur.com/RaR5utJ.jpg');
     background-position: auto;
