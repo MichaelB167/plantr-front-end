@@ -167,9 +167,13 @@ body.ember-application {
 }
 
 #demo-credentials {
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 30px;
   font-size: 15px;
   margin-right: 10px;
   margin-top: 14px;
+  padding: 0 3px 0 3px;
 }
 
 @media (max-width: 500px) {
