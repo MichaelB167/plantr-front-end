@@ -166,7 +166,18 @@ body.ember-application {
   -webkit-transform: rotate(330deg);
 }
 
+#demo-credentials {
+  font-size: 15px;
+  margin-right: 10px;
+  margin-top: 14px;
+}
+
 @media (max-width: 500px) {
+
+  #demo-credentials {
+    display: none;
+  }
+
   .index-header {
     font-size: 30px;
   }
