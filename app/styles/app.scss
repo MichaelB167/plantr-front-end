@@ -240,6 +240,31 @@ body.ember-application {
     font-size: 16px;
   }
 
+  #change-pass {
+    margin-left: -190px;
+    margin-top: -78px;
+    position: absolute;
+    text-align: center;
+    width: 25%;
+  }
+
+  #sign-out {
+    margin-left: -110px;
+    margin-top: -78px;
+    position: absolute;
+    text-align: center;
+    width: 25%;
+  }
+
+  #nav-break {
+    font-size: 25px;
+    margin-left: -140px;
+    margin-top: -68px;
+    position: absolute;
+    text-align: center;
+    width: 25%;
+  }
+
   .index-header {
     margin-left: 85px;
     font-size: 50px;
