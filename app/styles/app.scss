@@ -185,7 +185,9 @@ body.ember-application {
 
 @media (min-width: 600px) {
   .recipe-search {
+    position: absolute;
     margin-top: -130px;
+    margin-left: 60%;
   }
   .mobile-index-header {
     display: none;
