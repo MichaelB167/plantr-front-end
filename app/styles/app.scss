@@ -194,6 +194,9 @@ body.ember-application {
   .recipe-search {
     margin-top: -130px;
   }
+  .mobile-index-header {
+    display: none;
+  }
 }
 
 @media (max-width: 500px) {
@@ -204,6 +207,42 @@ body.ember-application {
 
   .index-header {
     font-size: 30px;
+  }
+
+  .mobile-index-header {
+    background-color: #1c4759;
+    border: 2px solid;
+    border-color: #0d222b;
+    border-radius: 30px 30px 10px 10px;
+    color: $white;
+    display: inline;
+    font-family: $raleway;
+    margin-left: -53px;
+    margin-top: 180px;
+    height: 70px;
+    font-size: 20px;
+    opacity: .60;
+    padding-right: 33px;
+    width: 214px;
+    position: absolute;
+    text-align: center;
+  }
+
+  #mobile-door-arrow {
+    color: #4da2c7;
+    font-size: 40px;
+  }
+
+  .rotation3 {
+    -webkit-transform: rotate(180deg);
+    float: left;
+  }
+
+  .rotation4 {
+    -webkit-transform: rotate(0deg);
+    margin-top: -73px;
+    margin-left: 180px;
+    position: absolute;
   }
 
   .plant-input {
