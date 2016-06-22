@@ -26,13 +26,6 @@ body.ember-application {
   background-color: $navbar-light-green;
 }
 
-@media (min-width: 500px) {
-  .nav-break {
-    display: none;
-  }
-}
-
-
 .dropdown-toggle {
   margin-top: 8.5px;
 }
@@ -190,16 +183,19 @@ body.ember-application {
   color: $white;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .recipe-search {
     margin-top: -130px;
   }
   .mobile-index-header {
     display: none;
   }
+  .nav-break {
+    display: none;
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
   #demo-credentials {
     display: none;
