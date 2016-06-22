@@ -7,11 +7,6 @@
     <button class="btn btn-secondary btn-xs" {{action 'edit'}}>Edit</button>
     <button class="btn btn-danger btn-xs" {{action 'destroyPlant'}}>Delete</button>
     </div>
-    <form class="recipe-search">
-      <h4>Get recipes with your ingredients</h4>
-      <input id="search-input" type="text" name=form.name placeholder="Enter Ingredients">
-      <button class="btn btn-success" type="submit">Search</button>
-    </form>
     {{else}}
       <div class="edit-display">
         <select name="category" autofocus>
