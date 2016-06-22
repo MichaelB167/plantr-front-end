@@ -176,6 +176,27 @@ body.ember-application {
   padding: 0 3px 0 3px;
 }
 
+.recipe-search {
+  float: right;
+}
+
+.recipe-search h4 {
+  color: $white;
+  margin-left: -16px;
+}
+
+.btn-secondary {
+  background-color: $edit-btn-teal;
+  color: $white;
+}
+@media (min-width: 500px) {
+
+  .recipe-search {
+    margin-top: -130px;
+    margin-right: 100px;
+  }
+}
+
 @media (max-width: 500px) {
 
   #demo-credentials {
